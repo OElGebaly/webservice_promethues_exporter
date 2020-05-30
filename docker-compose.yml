@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  # flask application web service 
+  webapp:
+    build:
+      context: src/webapp
+    stop_signal: SIGKILL
+    ports:
+      - 5000:5000
+
+  # application for requests load generator
+  generator:
+    build:
+      context: src/request-generator
+    stop_signal: SIGKILL
