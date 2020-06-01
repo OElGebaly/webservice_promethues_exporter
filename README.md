@@ -52,3 +52,19 @@ The memory usage of the Flask app. Based on data from the underlying Prometheus 
 The CPU usage of the Flask app as measured over 2 minutes intervals. Based on data from the underlying Prometheus client library.
 
 ![grafana](https://github.com/OElGebaly/webservice_promethues_exporter/blob/master/k8s/grafana/grafana.png)
+
+
+## Kubernetes Components
+![enter image description here](https://github.com/OElGebaly/webservice_promethues_exporter/blob/master/K8s_Diagram.jpg)
+
+1. **Minikube Cluster**
+2. **Namespace: Monitoring**
+3. **Deployment: Webapp** , it should contain a POD where the python application webapp is running. 
+4. **Deployment: Requests-Generator** , it should contain a POD where the python application requests-generator is running.
+5. Service: Webapp: used by both the **Requests-Generator** and **Promethues** to obtain the endpoints.
+6. **Deployment: Prometheus**, will deploy Prometheus server and needed configurations.
+7. **Deployment: Grafana**, will deploy Grafana instance and needed configurations.
+8. **Service: Prometheus**, used by Grafana to obtain metrics.
+9. **Service: Grafana**, used to obtain browser access to grafana.
+
+
