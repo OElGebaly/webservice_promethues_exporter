@@ -111,4 +111,4 @@ data:
         target_label: '__address__'
     - job_name: 'flaskapp'
       static_configs:
-        - targets: ['10.101.88.148:5000'] 
+        - targets: ['webappsvc:5000'] 
