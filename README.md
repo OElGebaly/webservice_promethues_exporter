@@ -98,7 +98,8 @@ The CPU usage of the Flask app as measured over 2 minutes intervals. Based on da
 	```
  6. list all existing services
 	 ```
-	 minikube service list
+	$ minikube service list
+
 	|-------------|--------------------|--------------|-----------------------------|
 	|  NAMESPACE  |        NAME        | TARGET PORT  |             URL             |
 	|-------------|--------------------|--------------|-----------------------------|
