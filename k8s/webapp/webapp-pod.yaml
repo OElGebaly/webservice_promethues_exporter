@@ -8,11 +8,11 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: idtest_webapp
+      image: osamaelgebaly/idtest:idtest_webapp
       ports:
         - containerPort: 5000
       imagePullPolicy: IfNotPresent
 
     - name: requests-generator
-      image: idtest_generator
+      image: osamaelgebaly/idtest:idtest_generator
       imagePullPolicy: IfNotPresent

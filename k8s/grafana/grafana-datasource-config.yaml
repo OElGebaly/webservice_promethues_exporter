@@ -11,10 +11,10 @@ data:
             {
                "access":"proxy",
                 "editable": true,
-                "name": "prometheus",
+                "name": "Prometheus",
                 "orgId": 1,
                 "type": "prometheus",
-                "url": "10.105.27.73:8080",
+                "url": "prometheus-service:8080",
                 "version": 1
             }
         ]
