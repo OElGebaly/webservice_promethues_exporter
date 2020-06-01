@@ -15,11 +15,29 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: idtest_webapp
+        image: osamaelgebaly/idtest:idtest_webapp
         ports:
-        - containerPort: 5000
-        imagePullPolicy: IfNotPresent
+        - name: webapp
+          containerPort: 5000
+        imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: requests-generator
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: requests-generator
+  template:
+    metadata:
+      name: requests-generator
+      labels:
+        app: requests-generator
+    spec:
+      containers:
       - name: requests-generator
-        image: idtest_generator
-        imagePullPolicy: IfNotPresent
+        image: osamaelgebaly/idtest:idtest_generator
+        imagePullPolicy: Always
         
