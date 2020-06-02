@@ -4,7 +4,7 @@ metadata:
   name: webapp
   namespace: monitoring
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -33,7 +33,7 @@ metadata:
   name: requests-generator
   namespace: monitoring
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
